@@ -59,7 +59,7 @@ class CreditCardProcessorPayment(PaymentProcessor):
           order.status = "paid"
     
 
-class DebitCardProcessorPayment():
+class DebitCardProcessorPayment(PaymentProcessor):
      def __init__(self, security_code: str, authorizer: Authorizer) -> None:
          self.security_code = security_code
          self.authorizer = authorizer
